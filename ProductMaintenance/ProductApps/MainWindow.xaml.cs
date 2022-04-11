@@ -31,6 +31,7 @@ namespace ProductApps
         {
             decimal myTotalDeliveryPayment;
             decimal MyTotalWrapPayment;
+            decimal MyTotalGSTPayment;
 
             try
             {
@@ -41,6 +42,8 @@ namespace ProductApps
                 totalPaymentTextBlock1.Text = myTotalDeliveryPayment.ToString();
                 MyTotalWrapPayment = myTotalDeliveryPayment + 5.00m;
                 totalWrapChargeTextBlock.Text = MyTotalWrapPayment.ToString();
+                MyTotalGSTPayment = MyTotalWrapPayment * 1.1m;
+                totalGSTChargeTextBlock.Text = MyTotalGSTPayment.ToString();
 
             }
             catch (FormatException)
